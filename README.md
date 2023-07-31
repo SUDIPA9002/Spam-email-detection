@@ -61,3 +61,5 @@ To run the code and Flask web application, follow these steps:
 4. Run the Flask application and access it through your web browser.
 
 Please note that this README provides a summary of the project. For detailed information and code execution, refer to the respective notebooks and scripts in the repository.
+If you want to know more about this you can go through this -
+https://medium.com/@sudipakoner492/building-a-spam-email-detection-model-a-step-by-step-guide-aa44e7ff9b21
