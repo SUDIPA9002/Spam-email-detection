@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SPAM Classifier</title>
+    <!--<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">  -->
+    <!-- <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script> -->
+    <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    body{
+        background-image: url('https://assets.entrepreneur.com/content/3x2/2000/20170503173359-GettyImages-157507192.jpeg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100%
+    }
+    .login-form-3 {
+        padding: 3%;
+        box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+        background-color: transparent;
+        border-radius: 1rem;
+        margin-left: 315px;
+        margin-top: 70px;
+        width : 50%;
+        text-align: center;
+        font-family: cursive
+    }
+    .input-field{
+        background-color: white;
+        border-radius: 4rem;
+        font-size: larger;
+        font-family: auto;
+    }
+    .text{
+        width: 601px;
+        height: 201px;
+        border-radius: 1rem;
+        font-family: revert;
+        text-align: center;
+        font-size: 20px;
+    }
+    .submit{
+        font-size: larger;
+        font-family: auto;
+        margin-top: 5px
+    }
+</style>
+<body>
+    <h1 align="center" style="color: crimson;font-size: xxx-large;font-family: revert;background: radial-gradient(black, transparent);"><u>SPAM VS NON-SPAM CLASSIFIER</u></h1>
+    <div class="login-form-3">
+        <form action="/predict" method="post">
+            <textarea id="text" name="text" rows="08" cols="60" onfocus="onTextareaFocus()" onblur="onTextareaBlur()"  class="text"></textarea><br>
+            <input type="submit" value="Submit" class="submit">
+            <p class="input-field">Predicted Class: {{result}}</p>
+        </form>
+    </div>
+    <script style="font-family: revert;text-align: center;font-size: xxx-large;">
+        function onTextareaFocus() {
+            var textarea = document.getElementById("text");
+            if (textarea.value === "Enter your text here...") {
+                textarea.value = "";
+            }
+        }
+
+        function onTextareaBlur() {
+            var textarea = document.getElementById("text");
+            if (textarea.value === "") {
+                textarea.value = "Enter your text here...";
+            }
+        }
+    </script>
+</body>
+</html>
